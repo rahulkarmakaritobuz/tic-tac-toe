@@ -57,7 +57,7 @@ const b1 = document.getElementById("b1");
   const b9 = document.getElementById("b9");
 
 let validation = () => {
-  console.log(b1.textContent, b2.textContent, b3.textContent);
+//   console.log(b1.textContent, b2.textContent, b3.textContent);
 
   if (
     !check(b1, b2, b3) &&
@@ -83,9 +83,9 @@ let validation = () => {
   }
 };
 let insertFun = (id) => {
-  console.log(id);
+//   console.log(id);
   const cell = document.getElementById(id);
-    console.log(inputFlag);
+    // console.log(inputFlag);
   if (!inputFlag && cell.textContent === "") {
     if (flag === 0) {
       cell.textContent = "X";
@@ -101,6 +101,7 @@ let insertFun = (id) => {
 let clearBoard = () => {
     // ++totalMatch;
     // document.getElementById("total").innerText = totalMatch;
+    document.getElementById("result").innerText ="";
     console.log(totalMatch);
     b1.textContent="";
     b2.textContent="";
