@@ -13,13 +13,16 @@
     <link rel="stylesheet" href="./css/index.css">
     <!-- <link rel="stylesheet" href="./css/glowButton.css"> -->
     <link rel="stylesheet" href="css/boardGlow.css">
+    <link rel="stylesheet" href="./css/mediaQuery.css">
     <title>tic-tac-toe</title>
 </head>
 
 <body>
-
     <div class="d-flex fs-1 justify-content-center">
-        <!-- <div class="score">Total Match</div> -->
+        <div class="d-flex flex-column align-items-center total-match ms-3">
+            <div class="d-flex score">Total Match</div>
+            <div class="d-flex score" id="total">0</div>
+        </div>
         <div class="d-flex align-items-center flex-column">
             <div class="score">Player1</div>
             <div class="score" id="player1">0</div>
@@ -29,9 +32,9 @@
             <div class="score" id="player2">0</div>
         </div>
     </div>
-    <div class="d-flex mt-4 mb-3 justify-content-center">
+    <div class="d-flex mt-4 mb-3 justify-content-center container">
         
-        <table class="d-flex ms-5 ps-5 justify-content-center text-center board">
+        <table class="d-flex justify-content-center text-center board">
             <tr class="board-row1">
                 <td><button id="b1" class="border-top-0 border-start-0 textStyle" onclick="insertFun('b1')"></button></td>
                 <td><button id="b2" class="border-top-0 textStyle" onclick="insertFun('b2')"></button></td>
@@ -55,10 +58,10 @@
         <button class="btn reset" onclick="reset()"><span>Reset</span><em></em></button>
         <button class="btn reset" onclick="clearBoard()"><span>Clear Board</span><em></em></button>
     </div>
-    <div class="d-flex flex-column total-match fs-4 ms-3">
+    <!-- <div class="d-flex flex-column total-match fs-4 ms-3">
         <div class="d-flex">Total Match</div>
         <div class="d-flex" id="total">0</div>
-    </div>
+    </div> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="./js/index.js"></script>
 </body>
